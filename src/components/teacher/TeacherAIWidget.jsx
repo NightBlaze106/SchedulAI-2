@@ -69,9 +69,7 @@ export default function TeacherAIWidget({ teacherId }) {
     }
     const targetTeacher = teachers[0];
 
-    // 2. Find Class
-    // Time format from AI might be "09:00" or "9:00". DB expects "09:00:00" usually or just string match if consistent.
-    // Let's try to match the start of the string.
+    
     const { data: classes } = await supabase
       .from('timetable')
       .select('id, subject:subjects(name)')
