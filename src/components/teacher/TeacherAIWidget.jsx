@@ -7,6 +7,7 @@ import { cn } from '@/lib/utils';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { supabase } from '@/lib/supabaseClient';
+import { API_BASE } from '@/lib/api'; // <--- THIS WAS MISSING
 
 export default function TeacherAIWidget({ teacherId }) {
   const [isOpen, setIsOpen] = useState(false);
