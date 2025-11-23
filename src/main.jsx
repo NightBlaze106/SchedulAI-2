@@ -23,7 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        <Route path="/" element={<UserDashboard />} />
 
         {/* Admin Routes */}
         <Route path="/admin" element={<AdminLayout />}>
@@ -37,7 +37,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Route>
         
         {/* User Routes */}
-        <Route path="/dashboard" element={<UserDashboard />} />
+        {/* <Route path="/dashboard" element={<UserDashboard />} /> */}
         <Route path="/teacher/:teacherId" element={<TeacherDashboard />} />
         
         {/* UPDATED: Points to the new sleek dashboard */}
