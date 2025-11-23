@@ -1,4 +1,5 @@
-export const API_BASE = "http://localhost:8000";
+// Use the environment variable if it exists (Production), otherwise use localhost (Development)
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 export async function generateTimetable(payload) {
   const res = await fetch(`${API_BASE}/generate-timetable`, {
